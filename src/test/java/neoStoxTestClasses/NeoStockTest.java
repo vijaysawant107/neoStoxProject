@@ -28,7 +28,7 @@ public class NeoStockTest extends neoStockBaseClass
 		passcode=new NeoStockPassccode(driver);
 		home=new NEoStockHome(driver);
 		
-		NeoStockUtility.wait(driver, 2000);
+		NeoStockUtility.wait(driver, 3000);
 		
 	}
 	@BeforeMethod
@@ -36,6 +36,7 @@ public class NeoStockTest extends neoStockBaseClass
 	{
 	    signin.enterMobNum(NeoStockUtility.propertyFile("MobNumber"));
 		signin.clickonsignin();
+		
 		NeoStockUtility.wait(driver, 1000);
 		passcode.enterpasscode(NeoStockUtility.propertyFile("Passcode"));
 		Thread.sleep(1000);
